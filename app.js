@@ -16,10 +16,5 @@ app.set('view engine','ejs')
 const routes = require('./server/routes/recipeRouter.js')
 app.use('/', routes)
 
-app.get("/howto",(req,res) =>{
-    res.render('./layouts/Howto')
-})
-app.get("/menu",(req,res) =>{
-    res.render('./layouts/menu')
-})
+
 app.listen(port,() =>console.log(`Listening to port ${port}`));
