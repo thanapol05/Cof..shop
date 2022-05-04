@@ -1,0 +1,53 @@
+
+
+
+
+<div class="container">
+    <h1 class="pb-4">อุปกรณ์การชงกาแฟเพิ่มเติม</h1>
+    <nav style="--bs-breadcrumb-divider: '';" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item  "><a href="/" class="text-decoration-none text-success fs-3 ">กลับ</a></li>
+    </ol>
+  </nav>
+    <section class="pb-4 pt-4">
+         <div class="d-flex mb-2 align-item-center">
+             <h2>เต้าต้มน้ำ</h2>
+         </div>
+    <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
+  
+     <% if(info !=''){ %>
+         <% info.toua.forEach(function(category, index) { %>
+             <a href="/detail/<%= category._id%>" class="col text-center text-dark category__link">
+             <div class="category__img category__img--large shadow">
+                 <img src="img/<%- category.image%>" alt="<%- category.name %>">
+             </div>
+             <div class="pt-1"><%- category.name %></div>
+             </a>
+         <% } )%>
+     <% } %>
+        
+       
+    </div>
+    </section>
+
+    <section class="pb-4 pt-4">
+        <div class="d-flex mb-2 align-item-center">
+            <h2>กล่องเก็บเมล็ดกาแฟ</h2>
+        </div>
+   <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
+ 
+    <% if(info !=''){ %>
+        <% info.kong.forEach(function(category, index) { %>
+            <a href="https://shopee.co.th/alwayscoffeeshop?categoryId=100010&itemId=5848275569" target="__blank" class="col text-center text-dark category__link">
+            <div class="category__img category__img--large shadow">
+                <img src="img/<%- category.image%>" alt="<%- category.name %>">
+            </div>
+            <div class="pt-1"><%- category.name %></div>
+            </a>
+        <% } )%>
+    <% } %>
+       
+      
+   </div>
+   </section>
+</div>
